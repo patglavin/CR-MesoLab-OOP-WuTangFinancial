@@ -1,35 +1,19 @@
 public class CurrencyExchange {
-    private static final double USDOLLAR = 1.00;
-    private static final double EURO = 0.94;
-    private static final double POUND = 0.82;
-    private static final double RUPEE = 68.32;
-    private static final double AUDOLLAR = 1.35;
-    private static final double CANDOLLAR = 1.32;
-    private static final double SINGDOLLAR = 1.43;
-    private static final double FRANC = 1.01;
-    private static final double RINGGIT = 4.47;
-    private static final double YEN = 115.84;
-    private static final double YUAN = 6.92;
 
-    public static double dollarToEuro(double initial){
-        System.out.println(initial * EURO);
-        return initial * EURO;
-    }
+    public static final double USDOLLAR = 1.00;
+    public static final double EURO = 0.94;
+    public static final double POUND = 0.82;
+    public static final double RUPEE = 68.32;
+    public static final double AUDOLLAR = 1.35;
+    public static final double CANDOLLAR = 1.32;
+    public static final double SINGDOLLAR = 1.43;
+    public static final double FRANC = 1.01;
+    public static final double RINGGIT = 4.47;
+    public static final double YEN = 115.84;
+    public static final double YUAN = 6.92;
 
-    public static double euroToDollar(double initial){
-        return initial / EURO;
-    }
-
-    public static double euroToPound(double initial){
-        return euroToDollar(initial) * POUND;
-    }
-
-    public static double poundToRupee(double initial){
-        return (initial/POUND) * RUPEE;
-    }
-
-    public static double rupeeToCanDollar(double initial){
-        return (initial/RUPEE) * CANDOLLAR;
+    public static double convertCurrency(double initial, double startingCurrency, double endingCurrency){
+        return (initial/startingCurrency) * endingCurrency;
     }
 
 }
