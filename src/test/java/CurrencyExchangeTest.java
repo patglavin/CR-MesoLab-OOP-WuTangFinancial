@@ -15,7 +15,6 @@ public class CurrencyExchangeTest {
     public void testDollarToEuro(){
         double expected = 0.94;
         double actual = CurrencyExchange.convertCurrency(initial, CurrencyExchange.USDOLLAR, CurrencyExchange.EURO);
-        System.out.println(CurrencyExchange.convertCurrency(initial, CurrencyExchange.USDOLLAR, CurrencyExchange.EURO));
         Assert.assertEquals(expected, actual, 0);
     }
 
@@ -79,6 +78,14 @@ public class CurrencyExchangeTest {
     public void testYenToYuan(){
         double expected = 0.059;
         double actual = CurrencyExchange.convertCurrency(initial, CurrencyExchange.YEN, CurrencyExchange.YUAN);
+        Assert.assertEquals(expected, actual, 0.001);
+    }
+
+    //never tested AUDOLLAR, so here's one extra :)
+    @Test
+    public void testAuDollarToYen(){
+        double expected = 85.807;
+        double actual = CurrencyExchange.convertCurrency(initial, CurrencyExchange.AUDOLLAR, CurrencyExchange.YEN);
         Assert.assertEquals(expected, actual, 0.001);
     }
 
