@@ -1,4 +1,3 @@
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +13,7 @@ public class CurrencyExchangeTest {
     @Test
     public void testDollarToEuro(){
         double expected = 0.94;
-        double actual = CurrencyExchange.convertCurrency(initial, CurrencyExchange.USDOLLAR, CurrencyExchange.EURO);
+        double actual = CurrencyExchange.convertCurrency(initial, CurrencyExchange.USDOLLAR , CurrencyExchange.EURO);
         Assert.assertEquals(expected, actual, 0);
     }
 
@@ -89,4 +88,11 @@ public class CurrencyExchangeTest {
         Assert.assertEquals(expected, actual, 0.001);
     }
 
+    //conversion to 1 currency and back
+    @Test
+    public void testDollarToYenToDollar(){
+        double expected = 1;
+        double actual = CurrencyExchange.convertCurrency(CurrencyExchange.convertCurrency(initial, CurrencyExchange.USDOLLAR, CurrencyExchange.YEN), CurrencyExchange.YEN, CurrencyExchange.USDOLLAR);
+        Assert.assertEquals(expected, actual, 0.001);
+    }
 }

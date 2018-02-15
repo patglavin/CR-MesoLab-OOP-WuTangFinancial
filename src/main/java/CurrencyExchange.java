@@ -12,8 +12,16 @@ public class CurrencyExchange {
     public static final double YEN = 115.84;
     public static final double YUAN = 6.92;
 
+//    public static double convertCurrency(double initial, double startingCurrency, double endingCurrency){
+//        return (initial/startingCurrency) * endingCurrency;
+//    }
+
     public static double convertCurrency(double initial, double startingCurrency, double endingCurrency){
         return (initial/startingCurrency) * endingCurrency;
+    }
+
+    public static double convertCurrency(double initial, Currency startingCurrency, Currency endingCurrency){
+        return (initial/startingCurrency.getExchangeValue()) * endingCurrency.getExchangeValue();
     }
 
 }
