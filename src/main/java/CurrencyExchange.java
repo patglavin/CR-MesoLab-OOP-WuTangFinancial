@@ -1,3 +1,5 @@
+import Currencies.Currency;
+
 public class CurrencyExchange {
 
     public static final double USDOLLAR = 1.00;
@@ -11,10 +13,6 @@ public class CurrencyExchange {
     public static final double RINGGIT = 4.47;
     public static final double YEN = 115.84;
     public static final double YUAN = 6.92;
-
-//    public static double convertCurrency(double initial, double startingCurrency, double endingCurrency){
-//        return (initial/startingCurrency) * endingCurrency;
-//    }
 
     public static double convertCurrency(double initial, double startingCurrency, double endingCurrency){
         return (initial/startingCurrency) * endingCurrency;

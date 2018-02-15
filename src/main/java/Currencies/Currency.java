@@ -1,3 +1,5 @@
+package Currencies;
+
 public abstract class Currency {
     private String name;
     private double exchangeValue;

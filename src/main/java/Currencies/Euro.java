@@ -1,6 +1,8 @@
+package Currencies;
+
 public class Euro extends Currency {
-    Euro() {
-        this.setName("Euro");
+    public Euro() {
+        this.setName("Currencies.Euro");
         this.setExchangeValue(0.94);
     }
 }
